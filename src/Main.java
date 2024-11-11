@@ -1,21 +1,13 @@
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Goods bananas = new Goods("banana", 150, 10);
+        ShoppingCart cart = new ShoppingCart();
+        cart.AddToCart(bananas);
 
-        Scanner sc = new Scanner(System.in);
-        sc.useLocale(Locale.US);
-
-        String numbers = sc.nextLine();
-        double result = 0;
-
-        String[] words = numbers.split(" + ");
-        for (String word : words) {
-            result += Double.parseDouble(word);
-            System.out.println(word);
+        for (Goods i : cart.getCart()) {
+            System.out.println(i.getName());
         }
-
-        System.out.println(result);
     }
 }
