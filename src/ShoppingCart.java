@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    private ArrayList<Goods> cart;
+    private ArrayList<Goods> cart = new ArrayList<>();
 
     public ShoppingCart() {
     }
